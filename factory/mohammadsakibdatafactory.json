@@ -1,0 +1,9 @@
+{
+	"name": "mohammadsakibdatafactory",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c4a34f8c-5a3b-4fdb-b245-916f99f2d524",
+		"tenantId": "d63fbab4-0366-4e54-83c4-5f230e36bdb1"
+	}
+}
