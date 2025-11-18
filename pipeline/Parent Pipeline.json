@@ -89,7 +89,8 @@
 					{
 						"activity": "Incremental_Ingestion",
 						"dependencyConditions": [
-							"Failed"
+							"Failed",
+							"Skipped"
 						]
 					}
 				],
