@@ -160,3 +160,27 @@ Finally, the refined, aggregated, business-ready dataset was written into the Go
 
 
 Ultimately, implementing the Medallion Architecture with Azure Data Factory allowed me to build a structured, resilient, and scalable data pipeline - one that reliably converts raw inputs into high-quality analytical outputs.
+
+
+### How I Integrated Azure Data Factory With GitHub (and Prepared for CI/CD)
+After building the full Medallion Architecture pipeline, the final step was making my Data Factory solution production-ready. To do that, I integrated Azure Data Factory with GitHub, enabled proper version control, and set the foundation for future CI/CD deployments.
+
+Here’s a quick summary of how I set it up:
+
+- ✨ Connected ADF to GitHub
+From the Manage → Git Configuration section, I linked my Data Factory to GitHub, selected the main branch as my collaboration branch, and let ADF create the adf_publish branch for deployment templates.
+
+- ✨ Worked inside a development branch
+To understand the recommended workflow, I created a new branch directly from ADF, added a demo pipeline activity, committed the changes, and kept development isolated from the main branch.
+
+- ✨ Created a Pull Request directly from ADF
+ADF automatically generated a PR with all my updates, redirected me to GitHub with everything pre-filled, and I merged the changes into main after reviewing the diffs.
+
+- ✨ Clicked “Publish” to generate deployment templates
+Publishing converted the contents of my main branch into ARM templates and committed them to the adf_publish branch. This branch now contains deployment-ready artifacts for Azure DevOps pipelines.
+
+This setup ensures my entire ADF project is version-controlled, traceable, and ready for CI/CD.
+
+I’ve written a detailed, step-by-step breakdown of the entire Git integration and Publish workflow here:
+
+https://medium.com/@sakibul1605/integrating-azure-data-factory-with-github-741180475b8f
